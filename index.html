@@ -7,36 +7,28 @@
 <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body onload="abrirLogin()">
+
+
+<div id="app">
 
 <header>
-
 <h1>Sistema de Controle de Estoque</h1>
 
 <nav>
 <ul>
-
 <li><a href="#">Início</a></li>
 <li><a href="#">Produtos</a></li>
 <li><a href="#">Movimentações</a></li>
 <li><a href="#">Relatórios</a></li>
 <li><a href="#">Usuários</a></li>
-
 </ul>
 </nav>
-
 </header>
 
 <section class="banner">
-
 <h2>Bem-vindo ao Sistema de Inventário</h2>
-
-<p>
-Gerencie entradas, saídas, saldo de produtos e controle completo do estoque da empresa.
-</p>
-
-<button onclick="entrar()">Acessar Sistema</button>
-
+<p>Gerencie entradas, saídas e controle completo do estoque.</p>
 </section>
 
 <section class="cards">
@@ -48,24 +40,58 @@ Gerencie entradas, saídas, saldo de produtos e controle completo do estoque da 
 
 <div class="card">
 <h3>Movimentações</h3>
-<p>Controle de entradas e saídas de estoque.</p>
+<p>Controle de entradas e saídas.</p>
 </div>
 
 <div class="card">
 <h3>Relatórios</h3>
-<p>Visualize dados e indicadores do estoque.</p>
+<p>Visualize dados do estoque.</p>
 </div>
 
 </section>
 
 <footer>
-
 <p>© 2026 Sistema de Inventário</p>
-
 </footer>
 
+</div>
+
+
+<div id="modalLogin" class="modal">
+<div class="modal-content">
+
+<h2>Login</h2>
+
+<input type="text" placeholder="Login" id="login">
+<input type="password" placeholder="Senha" id="senha">
+
+<button onclick="fazerLogin()">Entrar</button>
+
+<hr>
+
+<button class="cadastro-btn" onclick="abrirCadastro()">
+Cadastrar Usuário
+</button>
+
+</div>
+</div>
+
+
+<div id="modalCadastro" class="modal">
+<div class="modal-content">
+
+<h2>Cadastrar Usuário</h2>
+
+<input type="text" placeholder="Nome" id="nome">
+<input type="text" placeholder="Login" id="novoLogin">
+<input type="password" placeholder="Senha" id="novaSenha">
+
+<button onclick="cadastrarUsuario()">Cadastrar</button>
+<button onclick="fecharCadastro()">Cancelar</button>
+
+</div>
+</div>
+
 <script src="script.js"></script>
-
 </body>
-
 </html>
