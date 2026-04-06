@@ -6,7 +6,7 @@ function fazerLogin() {
     let login = document.getElementById("login").value;
     let senha = document.getElementById("senha").value;
 
-    fetch("http://localhost:8080/usuarios/login", {
+    fetch("http://inventario-backend-production-4a29.up.railway.app/usuarios/login", {
         method: "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify({ login, senha })
