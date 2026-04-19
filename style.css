@@ -68,30 +68,31 @@ footer {
     align-items: center;
 }
 
+/* Isso garante que o card branco fique bonito e centralizado */
 .modal-content {
     background: white;
-    padding: 20px;
+    padding: 30px;         /* Espaço interno para os inputs não encostarem na borda */
     border-radius: 10px;
-    width: 300px;
+    width: 320px;          /* Largura fixa para controle total */
     text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
+/* Isso deixa os inputs dentro do limite e empilhados */
 .modal-content input {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0;
+    width: 100%;           /* Ocupa toda a largura disponível do card */
+    padding: 12px;         /* Espaço para o texto respirar dentro do campo */
+    margin: 10px 0;        /* Espaço vertical entre um input e outro */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* ESSENCIAL: impede o input de sair para fora do card */
+    display: block;        /* Garante que fiquem um embaixo do outro */
 }
 
+/* Deixa o botão alinhado com os inputs */
 button {
-    padding: 10px;
     width: 100%;
-    margin-top: 10px;
-    border: none;
-    cursor: pointer;
-    background: #2c3e50;
-    color: white;
-}
-
-.cadastro-btn {
-    background: #3498db;
+    padding: 12px;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
