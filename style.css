@@ -3,44 +3,37 @@ body {
     margin: 0;
     background: #f5f5f5;
 }
-
 #app {
     display: none;
 }
-
 header {
     background: #2c3e50;
     color: white;
     padding: 20px;
 }
-
 nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
     padding: 0;
 }
-
 nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
-
 .banner {
     text-align: center;
     padding: 80px;
     background: #3498db;
     color: white;
 }
-
 .cards {
     display: flex;
     justify-content: center;
     gap: 30px;
     padding: 40px;
 }
-
 .card {
     background: white;
     padding: 30px;
@@ -48,14 +41,12 @@ nav a {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
-
 footer {
     background: #2c3e50;
     color: white;
     text-align: center;
     padding: 10px;
 }
-
 .modal {
     display: none;
     position: fixed;
@@ -67,29 +58,23 @@ footer {
     justify-content: center;
     align-items: center;
 }
-
-/* Isso garante que o card branco fique bonito e centralizado */
 .modal-content {
     background: white;
-    padding: 30px;         /* Espaço interno para os inputs não encostarem na borda */
+    padding: 30px;
     border-radius: 10px;
-    width: 320px;          /* Largura fixa para controle total */
+    width: 320px;
     text-align: center;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
-
-/* Isso deixa os inputs dentro do limite e empilhados */
 .modal-content input {
-    width: 100%;           /* Ocupa toda a largura disponível do card */
-    padding: 12px;         /* Espaço para o texto respirar dentro do campo */
-    margin: 10px 0;        /* Espaço vertical entre um input e outro */
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-sizing: border-box; /* ESSENCIAL: impede o input de sair para fora do card */
-    display: block;        /* Garante que fiquem um embaixo do outro */
+    box-sizing: border-box;
+    display: block;
 }
-
-/* Deixa o botão alinhado com os inputs */
 button {
     width: 100%;
     padding: 12px;
