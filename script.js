@@ -32,6 +32,10 @@ function fecharCadastro() {
     document.getElementById("modalCadastro").style.display = "none";
 }
 
+const btn = document.querySelector("#modalCadastro button");
+    btn.textContent = "Cadastrando...";
+    btn.disabled = true;
+
 function cadastrarUsuario() {
     let nome = document.getElementById("nome").value;
     let login = document.getElementById("novoLogin").value;
