@@ -37,7 +37,7 @@ function cadastrarUsuario() {
     let login = document.getElementById("novoLogin").value;
     let senha = document.getElementById("novaSenha").value;
 
-    fetch("https://sistema-de-inventario-n9ia.onrender.com/usuarios/cadastrar", {
+    fetch("https://inventario-backend-9oz3.onrender.com/usuarios/cadastrar", {
         method: "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify({ nome, login, senha })
