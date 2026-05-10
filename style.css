@@ -81,3 +81,32 @@ button {
     border-radius: 5px;
     box-sizing: border-box;
 }
+.crud-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.crud-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.btn {
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    width: auto;
+}
+.btn-blue  { background: #3498db; color: white; }
+.btn-green { background: #27ae60; color: white; }
+.btn-red   { background: #e74c3c; color: white; }
+table { width: 100%; border-collapse: collapse; }
+th { background: #3498db; color: white; padding: 10px; text-align: left; }
+td { padding: 10px; border-bottom: 1px solid #eee; }
+tr:hover { background: #f9f9f9; }

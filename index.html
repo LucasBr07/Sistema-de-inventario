@@ -11,19 +11,21 @@
 <h1>Sistema de Controle de Estoque</h1>
 <nav>
 <ul>
-<li><a href="#">Início</a></li>
+<li><a href="#" onclick="mostrarSecao('home')">Início</a></li>
 <li><a href="#">Produtos</a></li>
 <li><a href="#">Movimentações</a></li>
 <li><a href="#">Relatórios</a></li>
-<li><a href="usuarios.html">Usuários</a></li>
+<li><a href="#" onclick="mostrarSecao('usuarios')">Usuários</a></li>
 </ul>
 </nav>
 </header>
-<section class="banner">
+
+<section class="banner" id="secaoBanner">
 <h2>Bem-vindo ao Sistema de Inventário</h2>
 <p>Gerencie entradas, saídas e controle completo do estoque.</p>
 </section>
-<section class="cards">
+
+<section class="cards" id="secaoCards">
 <div class="card">
 <h3>Produtos</h3>
 <p>Cadastro e gerenciamento de produtos.</p>
@@ -37,10 +39,36 @@
 <p>Visualize dados do estoque.</p>
 </div>
 </section>
+
+<section id="secaoUsuarios" style="display:none; padding: 40px;">
+<div class="crud-container">
+<div class="crud-header">
+<h2>Usuários</h2>
+<div style="display:flex; gap:10px;">
+<button class="btn btn-green" onclick="abrirModalUsuario()">Incluir</button>
+<button class="btn btn-blue" onclick="editarUsuarioSelecionado()">Editar</button>
+<button class="btn btn-red" onclick="excluirUsuarioSelecionado()">Excluir</button>
+</div>
+</div>
+<table>
+<thead>
+<tr>
+<th><input type="checkbox" onclick="marcarTodosUsuarios(this)"></th>
+<th>ID</th>
+<th>Nome</th>
+<th>Login</th>
+</tr>
+</thead>
+<tbody id="tabelaUsuarios"></tbody>
+</table>
+</div>
+</section>
+
 <footer>
 <p>© 2026 Sistema de Inventário</p>
 </footer>
 </div>
+
 <div id="modalLogin" class="modal">
 <div class="modal-content">
 <h2>Login</h2>
@@ -51,6 +79,7 @@
 <button class="cadastro-btn" onclick="abrirCadastro()">Cadastrar Usuário</button>
 </div>
 </div>
+
 <div id="modalCadastro" class="modal">
 <div class="modal-content">
 <h2>Cadastrar Usuário</h2>
@@ -61,6 +90,19 @@
 <button onclick="fecharCadastro()">Cancelar</button>
 </div>
 </div>
+
+<div id="modalUsuario" class="modal">
+<div class="modal-content">
+<h2 id="modalUsuarioTitulo">Usuário</h2>
+<input type="hidden" id="editId">
+<input type="text" placeholder="Nome" id="formNome">
+<input type="text" placeholder="Login" id="formLogin">
+<input type="password" placeholder="Senha" id="formSenha">
+<button onclick="salvarUsuario()">Salvar</button>
+<button onclick="fecharModalUsuario()">Cancelar</button>
+</div>
+</div>
+
 <script src="script.js"></script>
 </body>
 </html>
