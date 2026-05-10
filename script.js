@@ -6,7 +6,7 @@ function fazerLogin() {
     let login = document.getElementById("login").value;
     let senha = document.getElementById("senha").value;
 
-    fetch("https://sistema-de-inventario-n9ia.onrender.com/usuarios/login", {
+    fetch("https://inventario-backend-9oz3.onrender.com/usuarios/login", {
         method: "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify({ login, senha })
